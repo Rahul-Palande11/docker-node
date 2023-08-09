@@ -1,6 +1,6 @@
 name: To Do CI of node app
 on:
-  push:
+  workflow_dispatch:
     branches:
       - master
 
