@@ -1,6 +1,8 @@
 name: To Do CI of node app
 on:
-  push
+  push:
+    branches:
+      - master
 
 jobs:
   build:
