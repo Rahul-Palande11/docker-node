@@ -5,12 +5,12 @@ on:
     branches:
       - master
 
-env:             
-  ECS_SERVICE: sag-ecs-service                # set this to your Amazon ECS service namee
-  ECS_CLUSTER: sag-ECS-cluster               # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: ./task-defination.json # set this to the path to your Amazon ECS task definition
-                                               # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: nodeappcontainer
+# env:             
+#   ECS_SERVICE: sag-ecs-service                # set this to your Amazon ECS service namee
+#   ECS_CLUSTER: sag-ECS-cluster               # set this to your Amazon ECS cluster name
+#   ECS_TASK_DEFINITION: ./task-defination.json # set this to the path to your Amazon ECS task definition
+#                                                # file, e.g. .aws/task-definition.json
+#   CONTAINER_NAME: nodeappcontainer
 
 jobs:
   deploy:
