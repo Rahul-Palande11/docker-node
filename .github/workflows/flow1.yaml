@@ -3,7 +3,7 @@ name: push node image to ECR
 on:
   push:
     branches:
-      - main
+      - master
 
 env:             
   ECS_SERVICE: sag-ecs-service                # set this to your Amazon ECS service namee
