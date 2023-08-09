@@ -1,6 +1,6 @@
 name: To Do CI of node app
 on:
-  workflow_dispatch:
+  push:
     branches:
       - master
 
@@ -22,6 +22,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: ECR Login
+        id: login-ecr
         uses: aws-actions/aws-ecr-login@v1
 
       # - name: Push image to ECR
