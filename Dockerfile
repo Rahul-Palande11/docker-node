@@ -1,8 +1,11 @@
+# Use the official Node.js image based on Alpine Linux
 FROM node:alpine
 
+# Set the working directory within the container
 WORKDIR /usr/app
 
-RUN npm install 
+# Copy your application files into the container
+COPY . .
 
-CMD ["npm","start"]
-
+# Define the command to run your Node.js application
+CMD ["node", "app.js"]
