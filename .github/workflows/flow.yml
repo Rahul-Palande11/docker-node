@@ -11,8 +11,8 @@ jobs:
       - name: Get code
         uses: actions/checkout@v2
 
-      # - name: Build image
-      #   run: docker build .  
+      - name: Build image
+        run: docker build .  
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -25,9 +25,9 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      # - name: Push image to ECR
-      #   run: |
-      #     aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 528267078178.dkr.ecr.ap-south-1.amazonaws.com
-      #     docker build -t ecr-repo .
-      #     docker tag ecr-repo:latest 528267078178.dkr.ecr.ap-south-1.amazonaws.com/ecr-repo:latest
-      #     docker push 528267078178.dkr.ecr.ap-south-1.amazonaws.com/ecr-repo:latest
+      - name: Push image to ECR
+        run: |
+          aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 528267078178.dkr.ecr.ap-south-1.amazonaws.com
+          docker build -t ecr-repo .
+          docker tag ecr-repo:latest 528267078178.dkr.ecr.ap-south-1.amazonaws.com/ecr-repo:latest
+          docker push 528267078178.dkr.ecr.ap-south-1.amazonaws.com/ecr-repo:latest
