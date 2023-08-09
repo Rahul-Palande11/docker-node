@@ -22,7 +22,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: ECR Login
-        uses: uses: aws-actions/aws-ecr-login@v1
+        uses: aws-actions/aws-ecr-login@v1
 
       - name: Push image to ECR
         run: |
